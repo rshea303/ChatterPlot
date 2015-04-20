@@ -2,14 +2,21 @@
   <div class="col-xs-12">
 
     <div class="row">
-      <div class="col-xs-2"></div>
+      <div class="col-xs-4"></div>
         <div class="col-xs-4">
-           company
+
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                Companies
+                <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Google</a></li>
+                  <li><a href="#">IBM</a></li>
+                  <li><a href="#">Yahoo</a></li>
+                </ul>
+          </div>
         </div>
-        <div class="col-xs-4">
-           timeframe
-        </div>
-      <div class="col-xs-2"></div>
+      <div class="col-xs-4"></div>
     </div>
     
     <div class="row">
@@ -24,18 +31,21 @@
       <div class="col-xs-2"></div>
         <div id="keys" class="col-xs-8">
           <div class="row">
-            <div class="col-xs-3">
-              box
+            <div class="col-xs-2"></div>
+            <div class="col-xs-1">
+              <%= image_tag("green.jpg", id: "key-code") %>
             </div>
-            <div class="col-xs-3">
-              stock price
+            <div id="key-words" class="col-xs-2">
+              STOCK PRICE 
             </div>
-            <div class="col-xs-3">
-              box
+            <div class="col-xs-2"></div>
+            <div class="col-xs-1">
+              <%= image_tag("red.jpg", id: "key-code") %> 
             </div>
-            <div class="col-xs-3">
-              sentiment
+            <div id="key-words" class="col-xs-2">
+              SENTIMENT 
             </div>
+            <div class="col-xs-2"></div>
           </div>
         </div>
       <div class="col-xs-2"></div>

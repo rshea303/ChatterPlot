@@ -7,8 +7,18 @@ body {
   background: url("/assets/black-background.jpg");
 }
 
+.dropdown {
+  text-align: center;
+}
+
+.dropdown a {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
 #main-graph {
-  border: solid;
   margin: 10px 0px 10px 0px;
 }
 
@@ -19,12 +29,22 @@ body {
 }
 
 #keys {
-  border: solid;
   margin: 10px 0px 10px 0px;
 }
 
+#key-code {
+  text-align: right;
+  height: auto;
+  width: 100%;
+}
+
+#key-words {
+  padding-top: 1%;
+  height: 100%;
+  width: auto;
+}
+
 #tweets {
-  border: solid;
   margin: 10px 0px 10px 0px;
 }
 
