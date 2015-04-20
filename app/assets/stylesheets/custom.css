@@ -10,7 +10,12 @@ body {
 #main-graph {
   border: solid;
   margin: 10px 0px 10px 0px;
-  height: 300px;
+}
+
+#home-image {
+  text-align: center;
+  height: auto;
+  width: 100%;
 }
 
 #keys {
