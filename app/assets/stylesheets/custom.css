@@ -26,5 +26,10 @@ body {
 #tweets {
   border: solid;
   margin: 10px 0px 10px 0px;
-  height: 200px;
+}
+
+#tweets-image {
+  text-align: center;
+  height: auto;
+  width: 100%;
 }
