@@ -2,7 +2,9 @@
   float: right;
 }  
 
-#home-background {
+body {
+  color: #fff;
+  background-color: gray;
 }
 
 #main-graph {
