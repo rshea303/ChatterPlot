@@ -3,9 +3,10 @@
 }
 
 body {
-  background: url("/assets/black-background.jpg");
+  /*background: url("/assets/black-background.jpg");*/
+  background-color: #cfd3d4;
   font-family: "Muli", sans-serif;
-  color: #fff;
+  color: #000608;
 }
 
 .dropdown {
@@ -13,7 +14,7 @@ body {
 }
 
 .dropdown a {
-  color: #fff;
+  color: #000608;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
