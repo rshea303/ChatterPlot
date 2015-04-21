@@ -3,9 +3,9 @@
 }
 
 body {
+  background: url("/assets/black-background.jpg");
   font-family: "Muli", sans-serif;
   color: #fff;
-  background: url(image-path("black-background.jpg")) repeat;
 }
 
 .dropdown {
