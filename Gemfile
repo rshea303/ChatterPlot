@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
