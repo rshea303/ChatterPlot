@@ -3,7 +3,7 @@
 }
 
 body {
-  background: image_path("background.jpg");
+  background: url("/assets/black-background.jpg");
   font-family: "Muli", sans-serif;
   color: #fff;
 }
