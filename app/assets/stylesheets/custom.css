@@ -6,7 +6,6 @@ html, body {
   min-height: 100%;
   position: relative;
   background: url("/assets/blue_chart.jpg");
-  color: #fff;
 }
 
 /* navigation */
@@ -49,28 +48,28 @@ html, body {
 }
 
 #keys {
-  background: #fff;
-  margin-bottom: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 #key-code {
+  border: solid;
+  border-color: #fff;
   text-align: right;
   height: auto;
   width: 100%;
-  padding-bottom: 8px;
 }
 
 #key-words {
-  padding-top: 1%;
+  background: #fff;
   height: 100%;
   width: auto;
-  color: black;
+  padding: 1%;
 }
 
 /* twitter section */
 
 #tweets {
-  margin: 10px 0px 90px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 #tweets-image {
