@@ -8,7 +8,11 @@
       </div>
       <div class="col-xs-9">
         <div id="login">
-          <%= link_to "Login with Twitter", "/auth/github" %> 
+          <% if current_user %>
+            <%= link_to "Log Out", session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Login with Twitter", "/auth/github" %> 
+          <% end %>
         </div>
       </div>
     </div>
