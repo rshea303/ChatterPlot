@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>ChatterPlot</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-    <%= render 'shared/navigation' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+  <div id="wrapper">
+    <div id="header">
+      <%= render 'shared/navigation' %>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <%= render 'shared/footer' %>
+    </div>
+  </div>
 </body>
 
 </html>
