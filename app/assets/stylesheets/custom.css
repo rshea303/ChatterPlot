@@ -22,6 +22,16 @@ html, body {
   float: right;
 }
 
+/* landing page */
+
+#title {
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Goblin One', sans-serif;
+  text-align: center;
+  margin-top: 210px;
+}
+
 /* main graph */
 
 .dropdown {
