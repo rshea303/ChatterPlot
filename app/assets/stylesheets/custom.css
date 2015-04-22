@@ -11,14 +11,18 @@ html, body {
 /* navigation */
 
 .navbar {
+  height: 50px;
   margin-bottom: 0;
+  background: black;
+  border: none;
   }
 
 .navbar a {
-  color: black;
+  color: #fff;
 }
 
 #login {
+  padding-top: 15px;
   float: right;
 }
 
