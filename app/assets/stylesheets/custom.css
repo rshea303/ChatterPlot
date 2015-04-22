@@ -46,6 +46,11 @@ html, body {
   color: #10E843;
 }
 
+.landing-drop {
+  margin-top: 35px;
+  background: black;
+}
+
 /* main graph */
 
 .dropdown {
