@@ -21,6 +21,10 @@ html, body {
   color: #fff;
 }
 
+#landing-title {
+  color: #fff;
+}
+
 #login {
   padding-top: 15px;
   float: right;
