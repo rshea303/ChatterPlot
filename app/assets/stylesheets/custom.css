@@ -39,7 +39,7 @@ html, body {
 }
 
 #main-graph {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 #home-image {
@@ -49,25 +49,28 @@ html, body {
 }
 
 #keys {
-  margin: 10px 0px 10px 0px;
+  background: #fff;
+  margin-bottom: 10px;
 }
 
 #key-code {
   text-align: right;
   height: auto;
   width: 100%;
+  padding-bottom: 8px;
 }
 
 #key-words {
   padding-top: 1%;
   height: 100%;
   width: auto;
+  color: black;
 }
 
 /* twitter section */
 
 #tweets {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 90px 0px;
 }
 
 #tweets-image {
