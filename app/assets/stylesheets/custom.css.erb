@@ -5,7 +5,7 @@ html, body {
 #wrapper {
   min-height: 100%;
   position: relative;
-  background: url("/assets/blue_chart.jpg");
+  background: url("<%= asset_path('blue_chart.jpg')%>");
 }
 
 /* navigation */
@@ -45,10 +45,14 @@ html, body {
 
 .scrolling {
   background: black;
+  height: 35px;
 }
 
 .scrolling_words {
   color: #10E843;
+  font-family: 'Orbitron';
+  margin-top: 5px;
+  font-size: 20px;
 }
 
 .landing-drop {
