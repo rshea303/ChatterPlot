@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'figaro'
+gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'rails_12factor'
 gem 'therubyracer'
