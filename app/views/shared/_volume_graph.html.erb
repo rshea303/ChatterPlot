@@ -3,25 +3,25 @@
   $(function () { 
       $('#container2').highcharts({
           chart: {
-              type: 'bar'
+              type: 'line'
           },
           title: {
-              text: 'Sentiment / Stock Price'
+              text: 'Volume / Stock Price'
           },
           xAxis: {
-              categories: ['Apples', 'Bananas', 'Oranges']
+              categories: ['9AM', '10AM', '11AM', 'NOON', '1PM', '2PM', '3PM', '4PM'] 
           },
           yAxis: {
               title: {
-                  text: 'Fruit eaten'
+                  text: 'Stock Price'
               }
           },
           series: [{
-              name: 'Jane',
-              data: [1, 0, 4]
+              name: 'Stock Price',
+              data: [1, 0, 4, 5, 10, 8, 5]
           }, {
-              name: 'John',
-              data: [5, 7, 3]
+              name: 'Sentiment',
+              data: [5, 7, 3, 4, 6, 7, 9]
           }]
       });
   });
