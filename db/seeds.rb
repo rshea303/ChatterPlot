@@ -20,6 +20,12 @@ class Seed
       puts "Company: #{company.name} (#{company.ticker_symbol})  --- Sentiment: date_and_time: #{sentiment.date_and_time} score: #{sentiment.score}"
       stock_price = company.stock_prices.create(date_and_time: DateTime.now, price: rand(1000..50000))
       puts "Company: #{company.name} (#{company.ticker_symbol})  --- Stock Price: date_and_time: #{stock_price.date_and_time} score: #{stock_price.price}"
+      
+      3.times do |i|
+        company.articles.create(source: "twitter", title: "Twitter article #{i}")
+        company.articles.create(source: "yahoo", title: "Yahoo! article #{i}")
+        company.articles.create(source: "marketwatch", title: "Marketwatch article #{i}")
+      end
     end
   end
 
