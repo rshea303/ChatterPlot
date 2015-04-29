@@ -1,0 +1,37 @@
+<div id="container" style="width:auto; height:300px;"></div>
+<script>
+  $(function () {
+      $('#container').highcharts({
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Sentiment Scores of Top 10 Companies'
+          },
+          subtitle: {
+              text: 'Source: Twitter'
+          },
+          xAxis: {
+            categories: ['<%= @company_short %>', 'Google', 'Amazon', 'Yahoo', 'Coca-Cola',
+                         'IBM', 'Disney', 'WalMart', 'Exxon', 'Apple'],
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Sentiment Score',
+                  align: 'middle'
+              },
+          },
+          plotOptions: {
+              bar: {
+                  dataLabels: {
+                      enabled: true
+                  }
+              }
+          },
+          series: [{
+            data: <%= @data_points %>
+          }]
+      });
+  });
+</script>
