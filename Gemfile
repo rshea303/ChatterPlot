@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sentimental'
 gem 'twitter'
 gem 'figaro'
 gem 'omniauth-twitter'
