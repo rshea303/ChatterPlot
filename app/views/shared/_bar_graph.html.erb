@@ -1,4 +1,4 @@
-<div id="container" data-array="<%= @company_names %>" style="width:auto; height:300px;"></div>
+<div id="container" data-array="<%= @company_names %>" data-scores="<%= @company_scores %>" style="width:auto; height:300px;"></div>
 <script>
   $(function () {
       $('#container').highcharts({
@@ -31,7 +31,7 @@
               }
           },
           series: [{
-            data: <%= @company_scores %>
+            data: $('#container').data('scores')
           }]
       });
   });
