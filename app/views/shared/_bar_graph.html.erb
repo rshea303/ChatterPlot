@@ -1,4 +1,4 @@
-<div id="container" data-array="<%= @company_names %>" data-scores="<%= @company_scores %>" style="width:auto; height:300px;"></div>
+<div id="container" data-array="<%= @company_names %>" data-scores="<%= @company_scores %>" style="width:auto; height:500px;"></div>
 <script>
   $(function () {
       $('#container').highcharts({
@@ -12,8 +12,6 @@
               text: 'Source: Twitter'
           },
           xAxis: {
-            //categories: ["MicroSoft", 'Google', 'Amazon', 'Yahoo', 'Coca-Cola',
-             //          'IBM', 'Disney', 'WalMart', 'Exxon', 'Apple']
               categories: $('#container').data('array')
           },
           yAxis: {
