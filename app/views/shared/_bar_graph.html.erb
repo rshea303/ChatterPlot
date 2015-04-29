@@ -1,4 +1,4 @@
-<div id="container" style="width:auto; height:300px;"></div>
+<div id="container" data-array="<%= @company_names %>" style="width:auto; height:300px;"></div>
 <script>
   $(function () {
       $('#container').highcharts({
@@ -12,8 +12,9 @@
               text: 'Source: Twitter'
           },
           xAxis: {
-            categories: ['MicroSoft', 'Google', 'Amazon', 'Yahoo', 'Coca-Cola',
-                         'IBM', 'Disney', 'WalMart', 'Exxon', 'Apple'],
+            //categories: ["MicroSoft", 'Google', 'Amazon', 'Yahoo', 'Coca-Cola',
+             //          'IBM', 'Disney', 'WalMart', 'Exxon', 'Apple']
+              categories: $('#container').data('array')
           },
           yAxis: {
               min: 0,
@@ -30,7 +31,7 @@
               }
           },
           series: [{
-            data: [34, 56, 78, 34, 56, 78, 23, 78, 99, 90] 
+            data: <%= @company_scores %>
           }]
       });
   });
