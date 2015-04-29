@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :users, exclude: [:index]
   resource :session
+
+  get '/search', to: "companies#show"
 end

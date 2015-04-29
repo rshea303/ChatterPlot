@@ -1,0 +1,10 @@
+<h1 style="color: #fff"><%= @company.name.capitalize %></h1>
+<h2 style="color: #fff">Ticker Symbol: <%= @company.ticker_symbol %></h2>
+<h3 style="color: #fff">New Articles</h3>
+<% @company.articles.each do |article| %>
+  <p style="color: #fff">
+    <%= article.source %><br>
+    <%= article.title %>
+  </p>
+<% end %>
+  
