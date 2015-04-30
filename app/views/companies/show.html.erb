@@ -1,10 +1,19 @@
-<h1 style="color: #fff"><%= @company.name.capitalize %></h1>
-<h2 style="color: #fff">Ticker Symbol: <%= @company.ticker_symbol %></h2>
-<h3 style="color: #fff">New Articles</h3>
-<% @company.articles.each do |article| %>
-  <p style="color: #fff">
-    <%= article.source %><br>
-    <%= article.title %>
-  </p>
-<% end %>
+<div class="container" style="padding: 12px;">
+  <div class="row">
+    <div class="row">
+      <div class="text-center col-xs-8 col-xs-offset-2">
+        <h1 style="color: #fff"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h1>
+      </div>
+    </div>
+      <div class="text-left col-xs-8 col-xs-offset-2" style="background-color: #fff;"> 
+        <h3 style="color: #fff">News Articles</h3>
+        <% @company.articles.each do |article| %>
+          <p style="color: black">
+            <%= article.source %><br>
+            <%= article.title %>
+          </p>
+        <% end %>
+      </div>
+  </div>
+</div>
   
