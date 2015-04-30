@@ -10,7 +10,7 @@
         <% @articles.each do |article| %>
           <p style="color: black">
             <%= link_to article['title'], article['link'] %><br>
-            <%= article['description'] %>
+            <%= article['description'].first(300) %>
           </p>
         <% end %>
       </div>
