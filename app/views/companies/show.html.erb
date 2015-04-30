@@ -5,12 +5,13 @@
         <h1 style="color: #fff"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h1>
       </div>
     </div>
-      <div class="text-left col-xs-8 col-xs-offset-2" style="background-color: #fff;"> 
+      <div class="text-left col-xs-8 col-xs-offset-2" style="background-color: #fff; height: 500px;"> 
         <h3 style="color: #fff">News Articles</h3>
-        <% @company.articles.each do |article| %>
+        <% @articles.each do |article| %>
           <p style="color: black">
-            <%= article.source %><br>
-            <%= article.title %>
+            <%= article['title'] %><br>
+            <%= article['link'] %><br>
+            <%= article['description'] %>
           </p>
         <% end %>
       </div>
