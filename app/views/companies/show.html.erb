@@ -9,8 +9,7 @@
         <h3 style="color: #fff">News Articles</h3>
         <% @articles.each do |article| %>
           <p style="color: black">
-            <%= article['title'] %><br>
-            <%= article['link'] %><br>
+            <%= link_to article['title'], article['link'] %><br>
             <%= article['description'] %>
           </p>
         <% end %>
