@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri'
+gem 'faraday'
 gem 'sentimental'
 gem 'twitter'
 gem 'figaro'
