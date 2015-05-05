@@ -26,7 +26,7 @@ class Seed
         company.articles.create(source: "yahoo", title: "Yahoo! article #{i} for #{company.name}")
         company.articles.create(source: "marketwatch", title: "Marketwatch article #{i} for #{company.name}")
       end
-      company.sentiments.create(score: company.name.length*5, date_and_time: DateTime.now)
+      company.sentiments.create(score: rand(0..100), date_and_time: DateTime.now)
     end
   end
 
