@@ -1,4 +1,9 @@
 <div class="container home-page" style="padding: 12px;">
+  <ul>
+    <% @tweets.each do |tweet| %>
+      <li><%= tweet %></li>
+    <% end %>
+  </ul>
   <div class="row">
     <div class="col-xs-12">
 
