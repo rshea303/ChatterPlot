@@ -14,4 +14,8 @@ class SentimentAnalysis
   def label
     results['label']
   end
+
+  def score
+    (results['probability']['pos'] * 100).round
+  end
 end
