@@ -19,7 +19,13 @@
         </div>
       </div>
 
-      <div class="col-xs-4"
+      <div class="col-xs-4">
+        <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px;"> 
+          Sentiment score and stock price goes here
+        </div>
+      </div>
+
+      <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px;"> 
             <h3 style="color: black">Relevant tweets that include mention of <%= @company.name.capitalize %></h3>
             <% @tweets.each do |tweet| %>
