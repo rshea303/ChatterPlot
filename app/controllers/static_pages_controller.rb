@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @tweets = TwitterService.new.search_by("#google").take(5).map do |tweet|
+    @tweets = TwitterService.new.search_by("pepsi").take(5).map do |tweet|
       tweet.text
     end
 

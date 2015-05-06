@@ -1,18 +1,36 @@
 <div class="container" style="padding: 12px;">
   <div class="row">
+
     <div class="row">
-      <div class="text-center col-xs-8 col-xs-offset-2">
-        <h1 style="color: #fff"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h1>
+      <div class="text-center col-xs-4 col-xs-offset-4">
+          <h2 class="text-center" style="color: #fff; background-color: gray; padding: 0px;"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h2>
       </div>
     </div>
-      <div class="text-left col-xs-8 col-xs-offset-2" style="background-color: #fff; height: 500px; overflow: scroll;"> 
-        <h3 style="color: black">Relevant News Articles that include mentions of <%= @company.name.capitalize %></h3>
-        <% @articles.each do |article| %>
-          <p style="color: black">
-          <a href=<%= article['link'] %> target="_blank"><%= article['title'] %></a>
-          </p>
-        <% end %>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px;"> 
+          <h3 style="color: black">Relevant News Articles that include mentions of <%= @company.name.capitalize %></h3>
+          <% @articles.each do |article| %>
+            <p style="color: black">
+            <a href=<%= article['link'] %> target="_blank"><%= article['title'] %></a>
+            </p>
+          <% end %>
+        </div>
       </div>
+
+      <div class="col-xs-4"
+        <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px;"> 
+            <h3 style="color: black">Relevant tweets that include mention of <%= @company.name.capitalize %></h3>
+            <% @tweets.each do |tweet| %>
+              <p style="color: black">
+              <%= tweet %>
+              </p>
+            <% end %>
+          </div>
+      </div>
+    </div>
+        
   </div>
 </div>
   
