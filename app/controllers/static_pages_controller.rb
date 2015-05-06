@@ -6,8 +6,7 @@ class StaticPagesController < ApplicationController
 
     # grab tweets
     # run tweet text thru sentiment analysis
-    # averge sentiment scores
-    # normalize the average score
+    # normalize the average score (* 100)
     # pass it to the graph
     @companies = Company.all
     @company_names = Company.all.map(&:name)
