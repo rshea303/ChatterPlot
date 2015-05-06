@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'stock_quote'
 gem 'nokogiri'
 gem 'faraday'
 gem 'sentimental'
