@@ -3,7 +3,7 @@ class CompaniesController < ApplicationController
     if Company.all.map(&:name).include?(params[:q])
       @company = Company.find_by(name: params[:q])
       @articles = YahooService.new.articles(@company.ticker_symbol)
-      @tweets = TwitterService.new.search_by(@company.name).take(20).map do |tweet|
+      @tweets = TwitterService.new.search_by(@company.name).take(100).map do |tweet|
         tweet.text
       end
        @score = SentimentAnalysis.new(@tweets.join(' ')).score

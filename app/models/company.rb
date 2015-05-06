@@ -7,7 +7,7 @@ class Company < ActiveRecord::Base
 
   def self.scores
     Company.all.map do |company|
-      SentimentAnalysis.new(TwitterService.new.search_by(company.name).take(20).map do |tweet|
+      SentimentAnalysis.new(TwitterService.new.search_by(company.name).take(100).map do |tweet|
         tweet.text
       end.join(' ')).score
     end
