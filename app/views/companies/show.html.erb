@@ -35,7 +35,7 @@
         </div>
 
         <div class="row">
-          <div class="text-center" style="background-color: #fff; height: 200px; padding: 35px; border: solid black;"> 
+          <div class="text-center" style="background-color: <%= @sp_color %>; height: 200px; padding: 35px; border: solid black;"> 
             <h2>Stock Price</h2>
             <h2><%= number_to_currency(@stock_price, precision: 2) %></h2>
           </div>

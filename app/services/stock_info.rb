@@ -8,4 +8,12 @@ class StockInfo
   def bid
     stock_info.bid
   end
+
+  def open
+    stock_info.open
+  end
+
+  def last_trade_price_only
+    stock_info.last_trade_price_only
+  end
 end

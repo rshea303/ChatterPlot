@@ -12,4 +12,21 @@ class Company < ActiveRecord::Base
       end.join(' ')).score
     end
   end
+
+  def articles(company)
+    YahooService.new.articles(company.ticker_symbol)
+  end
+
+  def tweets(company)
+    TwitterService.new.search_by(company.name).take(100).map(&:text)
+  end
+
+  def score(company)
+    SentimentAnalysis.new(tweets(company).join(' ')).score
+  end
+
+  def stock_price(company)
+    StockInfo.new(company.ticker_symbol).last_trade_price_only
+  end
+
 end
