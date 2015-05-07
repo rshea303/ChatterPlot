@@ -3,14 +3,14 @@
 
     <div class="row">
       <div class="text-center col-xs-4 col-xs-offset-4">
-          <h2 class="text-center" style="color: #fff; background-color: gray; padding: 0px;"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h2>
+        <h1 class="text-center" style="color: black; background-color: #fff; border: solid black; height: 50px; margin-left: -15px; margin-right: -15px;"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h1>
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px; border: solid black;"> 
-          <h3 style="color: black">Relevant News Articles that include mentions of <%= @company.name.capitalize %></h3>
+          <h3 style="color: black; text-align: center;">Articles relevant to <%= @company.name.capitalize %></h3>
           <% @articles.each do |article| %>
             <p style="color: black">
             <a href=<%= article['link'] %> target="_blank"><%= article['title'] %></a>
@@ -22,22 +22,22 @@
       <div class="col-xs-4">
         <div class="row">
           <div class="text-center" style="background-color: <%= @color %>; height: 200px; padding: 35px; border: solid black;"> 
-            <h3>Sentiment score</h3>
-            <h1><%= @score %></h1>
+            <h2>Sentiment score</h2>
+            <h2><%= @score %></h2>
           </div>
         </div>
 
         <div class="row">
           <div class="text-center" style="background-color: #fff; height: 200px; padding: 35px; border: solid black;"> 
-            <h3>Stock Price</h3>
-            <h1><%= @stock_price %></h1>
+            <h2>Stock Price</h2>
+            <h2>$<%= @stock_price %></h2>
           </div>
         </div>
       </div>
 
       <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px; border: solid black;"> 
-            <h3 style="color: black">Relevant tweets that include mention of <%= @company.name.capitalize %></h3>
+            <h3 style="color: black; text-align: center"><%= @company.name.capitalize %> Tweets</h3>
             <% @tweets.each do |tweet| %>
               <p style="color: black">
               <%= tweet %>
