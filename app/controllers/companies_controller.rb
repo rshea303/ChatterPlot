@@ -8,8 +8,17 @@ class CompaniesController < ApplicationController
       end
        @score = SentimentAnalysis.new(@tweets.join(' ')).score
        @stock_price = StockInfo.new(@company.ticker_symbol).bid
+       @color = what_color(@score)
     else
       redirect_to :back
     end 
+  end
+
+  def what_color(score)
+    if score >= 50
+      'green'
+    else
+      'red'
+    end
   end
 end
