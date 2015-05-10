@@ -7,7 +7,7 @@
       </div>
 
       <div class="text-center col-xs-4">
-        <h3 class="text-center" style="color: black; background-color: #fff; border: solid black; height: 50px; margin-left: -15px; margin-right: -15px; padding-top: 8px;"><%= @company.name.capitalize %> (<%= @company.ticker_symbol %>)</h3>
+        <h3 class="text-center" style="color: black; background-color: #fff; border: solid black; height: 50px; margin-left: -15px; margin-right: -15px; padding-top: 8px;"><%= @dashboard.company_name.capitalize %> (<%= @dashboard.ticker_symbol %>)</h3>
       </div>
 
       <div class="col-xs-4">
@@ -18,7 +18,7 @@
     <div class="row">
       <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px; border: solid black;"> 
-          <% @articles.each do |article| %>
+          <% @dashboard.articles.each do |article| %>
             <p style="color: black">
             <a href=<%= article['link'] %> target="_blank"><%= article['title'] %></a>
             </p>
@@ -28,23 +28,23 @@
 
       <div class="col-xs-4">
         <div class="row">
-          <div class="text-center" style="background-color: <%= @color %>; height: 200px; padding: 35px; border: solid black;"> 
+          <div class="text-center" style="background-color: <%= @dashboard.color %>; height: 200px; padding: 35px; border: solid black;"> 
             <h2>Sentiment score</h2>
-            <h2><%= @score %></h2>
+            <h2><%= @dashboard.score %></h2>
           </div>
         </div>
 
         <div class="row">
-          <div class="text-center" style="background-color: <%= @sp_color %>; height: 200px; padding: 35px; border: solid black;"> 
+          <div class="text-center" style="background-color: <%= @dashboard.stock_price_color %>; height: 200px; padding: 35px; border: solid black;"> 
             <h2>Stock Price</h2>
-            <h2><%= number_to_currency(@stock_price, precision: 2) %></h2>
+            <h2><%= number_to_currency(@dashboard.stock_price, precision: 2) %></h2>
           </div>
         </div>
       </div>
 
       <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px; border: solid black;"> 
-            <% @tweets.each do |tweet| %>
+            <% @dashboard.tweets.each do |tweet| %>
               <p style="color: black">
               <%= tweet %>
               </p>
