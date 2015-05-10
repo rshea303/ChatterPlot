@@ -44,10 +44,10 @@
 
       <div class="col-xs-4">
         <div class="text-left" style="background-color: #fff; height: 400px; overflow: scroll; padding: 10px; border: solid black;"> 
-            <% @dashboard.tweets.each do |tweet| %>
-              <p style="color: black">
-              <%= tweet %>
-              </p>
+              <ul>
+                <% @dashboard.tweets.each do |tweet| %>
+                  <li><a href=<%= "https://www.twitter.com/#{tweet.user.screen_name}" %> target="_blank"><%= tweet.text %></a></li><br>
+              </ul>
             <% end %>
           </div>
       </div>

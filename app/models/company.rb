@@ -15,7 +15,8 @@ class Company < ActiveRecord::Base
   end
 
   def tweets(company)
-    TwitterService.new.search_by(company.name).take(100).map(&:text)
+    TwitterService.new.search_by("#{company.name}").take(5)
+    #TwitterService.new.search_by(company.name).take(100).map(&:text)
   end
 
   def score(company)
