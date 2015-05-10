@@ -1,2 +1,0 @@
-class SentimentsController < ApplicationController
-end
