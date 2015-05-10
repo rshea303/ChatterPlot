@@ -1,7 +1,7 @@
 class Seed
 
   def call
-    articles
+    companies
   end
 
   def companies
@@ -17,17 +17,6 @@ class Seed
     Company.create(name: "walmart", ticker_symbol: "WMT"),
     Company.create(name: "exxon", ticker_symbol: "XOM")
     ]
-  end
-
-  def articles
-    companies.each do |company|
-      3.times do |i|
-        company.articles.create(source: "twitter", title: "Twitter article #{i} for #{company.name}")
-        company.articles.create(source: "yahoo", title: "Yahoo! article #{i} for #{company.name}")
-        company.articles.create(source: "marketwatch", title: "Marketwatch article #{i} for #{company.name}")
-      end
-      company.sentiments.create(score: rand(0..100), date_and_time: DateTime.now)
-    end
   end
 
   def self.call
