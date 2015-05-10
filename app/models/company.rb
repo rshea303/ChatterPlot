@@ -29,4 +29,21 @@ class Company < ActiveRecord::Base
     StockInfo.new(company.ticker_symbol).last_trade_price_only
   end
 
+  def which_color(company, stock_price)
+    if stock_price > StockInfo.new(company.ticker_symbol).open
+      'green'
+    else
+      'red'
+    end
+  end
+
+  def color(score)
+    if score >= 50
+      'green'
+    else
+      'red'
+    end
+  end
+
+
 end
