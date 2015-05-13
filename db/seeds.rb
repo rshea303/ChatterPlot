@@ -7,7 +7,7 @@ class Seed
   def companies
     [ 
     Company.create(name: "google", ticker_symbol: "GOOG"),
-    Company.create(name: "apple", ticker_symbol: "APPL"),
+    Company.create(name: "apple", ticker_symbol: "AAPL"),
     Company.create(name: "yahoo", ticker_symbol: "YHOO"),
     Company.create(name: "facebook", ticker_symbol: "FB"),
     Company.create(name: "ibm", ticker_symbol: "IBM"),

@@ -16,7 +16,6 @@ class Company < ActiveRecord::Base
 
   def tweets(company)
     TwitterService.new.search_by("#{company.name}").take(100)
-    #TwitterService.new.search_by(company.name).take(100).map(&:text)
   end
 
   def score(company)
@@ -25,6 +24,26 @@ class Company < ActiveRecord::Base
 
   def stock_price(company)
     StockInfo.new(company.ticker_symbol).last_trade_price_only
+  end
+
+  def open(company)
+    StockInfo.new(company.ticker_symbol).open
+  end
+
+  def year_high(company)
+    StockInfo.new(company.ticker_symbol).year_high
+  end
+
+  def year_low(company)
+    StockInfo.new(company.ticker_symbol).year_low
+  end
+
+  def low(company)
+    StockInfo.new(company.ticker_symbol).low
+  end
+
+  def high(company)
+    StockInfo.new(company.ticker_symbol).high
   end
 
   def which_color(company, stock_price)

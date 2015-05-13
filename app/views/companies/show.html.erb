@@ -35,9 +35,37 @@
         </div>
 
         <div class="row">
-          <div class="text-center stock-price" style="background-color: <%= @dashboard.stock_price_color %>;"> 
-            <h2>Stock Price</h2>
-            <h2><%= number_to_currency(@dashboard.stock_price, precision: 2) %></h2>
+          <div class="col-xs-4 text-center" style="border: solid black; height: 200px;">
+            <div class="row" style="border: solid black; height: 100px; background-color: #fff; padding-top: 23px;">
+              <p>Daily High</p>
+              <p><%= number_to_currency(@dashboard.high, precision: 2) %></p> 
+            </div>
+            <div class="row" style="border: solid black; height: 100px; background-color: #fff; padding-top: 23px;">
+              <p>Daily Low</p>
+              <p><%= number_to_currency(@dashboard.low, precision: 2) %></p>
+            </div>
+          </div>
+
+          <div class="col-xs-4 text-center stock-price" style="height: 200px;"> 
+            <div class="row" style="border: solid black; height: 100px; padding-top: 23px; background-color: <%= @dashboard.stock_price_color %>;">
+              <p>Stock Price</p>
+              <p><%= number_to_currency(@dashboard.stock_price, precision: 2) %></p>
+            </div>
+            <div class="row" style="border: solid black; height: 100px; background-color: #fff; padding-top: 23px;">
+              <p>Open</p>
+              <p><%= number_to_currency(@dashboard.open, precision: 2) %></p>
+            </div>
+          </div>
+
+          <div class="col-xs-4 text-center" style="border: solid black; height: 200px;">
+            <div class="row" style="border: solid black; height: 100px; background-color: #fff; padding-top: 23px;">
+              <p>12 Month High</p>
+              <p><%= number_to_currency(@dashboard.year_high, precision: 2) %></p>
+            </div>
+            <div class="row" style="border: solid black; height: 100px; background-color: #fff; padding-top: 23px;">
+              <p>12 Month Low</p>
+              <p><%= number_to_currency(@dashboard.year_low, precision: 2) %></p>
+            </div>
           </div>
         </div>
       </div>

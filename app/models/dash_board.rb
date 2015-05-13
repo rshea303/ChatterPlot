@@ -36,4 +36,24 @@ class DashBoard
   def company_name
     company.name
   end
+
+  def open
+    company.open(company)
+  end
+
+  def year_high
+    company.year_high(company)
+  end
+
+  def year_low
+    company.year_low(company)
+  end
+
+  def low
+    company.low(company)
+  end
+
+  def high
+    company.high(company)
+  end
 end

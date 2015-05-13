@@ -16,4 +16,20 @@ class StockInfo
   def last_trade_price_only
     stock_info.last_trade_price_only
   end
+
+  def high
+    stock_info.days_high
+  end
+
+  def low
+    stock_info.days_low
+  end
+
+  def year_high
+    stock_info.year_high
+  end
+
+  def year_low
+    stock_info.year_low
+  end
 end
