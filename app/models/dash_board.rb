@@ -1,59 +1,76 @@
 class DashBoard
-  attr_reader :company
+  attr_reader :ticker_symbol, :name
 
-  def initialize(company)
-    @company = company
+  def initialize(ticker_symbol, name)
+    @ticker_symbol = ticker_symbol
+    @name          = name
   end
 
   def articles
-    company.articles(company)
+    YahooService.new.articles(ticker_symbol)
   end
 
   def tweets
-    company.tweets(company)
+    TwitterService.new.search_by("#{name}").take(100)
   end
 
   def score
-    company.score(company)
+    SentimentAnalysis.new(tweets.join(' ')).score
   end
 
   def stock_price
-    company.stock_price(company)
+    StockInfo.new(ticker_symbol).last_trade_price_only
   end
 
   def color
-    company.color(score)
+    sentiment_color(score)
   end
   
   def stock_price_color
-    company.which_color(company, stock_price)
+    which_color
   end
 
-  def ticker_symbol
-    company.ticker_symbol
+  def company_ticker_symbol
+    ticker_symbol
   end
 
   def company_name
-    company.name
+    name
   end
 
   def open
-    company.open(company)
+    StockInfo.new(ticker_symbol).open
   end
 
   def year_high
-    company.year_high(company)
+    StockInfo.new(ticker_symbol).year_high
   end
 
   def year_low
-    company.year_low(company)
+    StockInfo.new(ticker_symbol).year_low
   end
 
   def low
-    company.low(company)
+    StockInfo.new(ticker_symbol).low
   end
 
   def high
-    company.high(company)
+    StockInfo.new(ticker_symbol).high
+  end
+  
+  def sentiment_color(score)
+    if score >= 50
+      'green'
+    else
+      'red'
+    end
+  end
+
+  def which_color
+    if stock_price > StockInfo.new(ticker_symbol).open
+      'green'
+    else
+      'red'
+    end
   end
 end

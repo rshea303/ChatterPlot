@@ -1,13 +1,22 @@
 require 'open-uri'
 
 class TickerSymbolService
-  attr_reader :symbol_lookup
+  attr_reader :connection, :parsed_text
 
-  def initialize(name)
-    @symbol_lookup = Faraday.new(url: "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query=#{name}&callback=YAHOO.Finance.SymbolSuggest.ssCallback")
+  def initialize
+    @connection = Faraday.new(url: "http://autoc.finance.yahoo.com")
   end
 
-  def ticker_symbol
-    puts "hello"
-  end 
+  def symbols(name) 
+    params = { query: name, callback: 'YAHOO.Finance.SymbolSuggest.ssCallback' }
+    parse(connection.get('/autoc', params))
+  end
+
+  def parse(response)
+    start_index = response.body.index('(') + 1
+    end_index = response.body.index(')')
+    text = response.body.slice(start_index, end_index - start_index)
+    @parsed_text = JSON.parse(text)['ResultSet']['Result'].first
+  end
+
 end
