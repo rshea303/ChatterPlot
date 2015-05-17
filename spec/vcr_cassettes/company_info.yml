@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://autoc.finance.yahoo.com/autoc?query=exxon&callback=YAHOO.Finance.SymbolSuggest.ssCallback
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Sun, 17 May 2015 19:48:08 GMT
+      cache-control:
+      - max-age=1800, public
+      content-type:
+      - application/x-javascript; charset=utf-8
+      vary:
+      - Accept-Encoding,X-Ssl
+      age:
+      - '0'
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      via:
+      - http/1.1 media-border150.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
+      server:
+      - ATS
+      strict-transport-security:
+      - max-age=172800
+    body:
+      encoding: UTF-8
+      string: YAHOO.Finance.SymbolSuggest.ssCallback({"ResultSet":{"Query":"exxon","Result":[{"symbol":"XOM","name":"Exxon
+        Mobil Corporation","exch":"NYQ","type":"S","exchDisp":"NYSE","typeDisp":"Equity"},{"symbol":"XONA.SG","name":"EXXON
+        MOBIL","exch":"STU","type":"S","exchDisp":"Stuttgart","typeDisp":"Equity"},{"symbol":"XONA.HA","name":"EXXON
+        MOBIL","exch":"HAN","type":"S","exchDisp":"Hanover","typeDisp":"Equity"},{"symbol":"XONA.DU","name":"EXXON
+        MOBIL","exch":"DUS","type":"S","exchDisp":"Dusseldorf Stock Exchange ","typeDisp":"Equity"},{"symbol":"XOM.MX","name":"Exxon
+        Mobil Corporation","exch":"MEX","type":"S","exchDisp":"Mexico","typeDisp":"Equity"},{"symbol":"EXXO34.SA","name":"Exxon
+        Mobil Corporation","exch":"SAO","type":"S","exchDisp":"Sao Paolo","typeDisp":"Equity"},{"symbol":"XONA.DE","name":"Exxon
+        Mobil Corporation","exch":"GER","type":"S","exchDisp":"XETRA","typeDisp":"Equity"},{"symbol":"XONA.BE","name":"EXXON
+        MOBIL","exch":"BER","type":"S","exchDisp":"Berlin","typeDisp":"Equity"},{"symbol":"XOM-U.TI","name":"EXXON
+        MOBIL","exch":"TLO","type":"S","exchDisp":"TLX Exchange ","typeDisp":"Equity"},{"symbol":"0R1M.L","name":"EXXON
+        MOBIL CORP EXXON MOBIL OR","exch":"LSE","type":"S","exchDisp":"London","typeDisp":"Equity"}]}})
+    http_version: 
+  recorded_at: Sun, 17 May 2015 19:48:08 GMT
+- request:
+    method: get
+    uri: http://autoc.finance.yahoo.com/autoc?query=exxon&callback=YAHOO.Finance.SymbolSuggest.ssCallback
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Sun, 17 May 2015 19:48:08 GMT
+      cache-control:
+      - max-age=1800, public
+      content-type:
+      - application/x-javascript; charset=utf-8
+      vary:
+      - Accept-Encoding,X-Ssl
+      age:
+      - '0'
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      via:
+      - http/1.1 media-border10.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
+      server:
+      - ATS
+      strict-transport-security:
+      - max-age=172800
+    body:
+      encoding: UTF-8
+      string: YAHOO.Finance.SymbolSuggest.ssCallback({"ResultSet":{"Query":"exxon","Result":[{"symbol":"XOM","name":"Exxon
+        Mobil Corporation","exch":"NYQ","type":"S","exchDisp":"NYSE","typeDisp":"Equity"},{"symbol":"XONA.SG","name":"EXXON
+        MOBIL","exch":"STU","type":"S","exchDisp":"Stuttgart","typeDisp":"Equity"},{"symbol":"XONA.HA","name":"EXXON
+        MOBIL","exch":"HAN","type":"S","exchDisp":"Hanover","typeDisp":"Equity"},{"symbol":"XONA.DU","name":"EXXON
+        MOBIL","exch":"DUS","type":"S","exchDisp":"Dusseldorf Stock Exchange ","typeDisp":"Equity"},{"symbol":"XOM.MX","name":"Exxon
+        Mobil Corporation","exch":"MEX","type":"S","exchDisp":"Mexico","typeDisp":"Equity"},{"symbol":"EXXO34.SA","name":"Exxon
+        Mobil Corporation","exch":"SAO","type":"S","exchDisp":"Sao Paolo","typeDisp":"Equity"},{"symbol":"XONA.DE","name":"Exxon
+        Mobil Corporation","exch":"GER","type":"S","exchDisp":"XETRA","typeDisp":"Equity"},{"symbol":"XONA.BE","name":"EXXON
+        MOBIL","exch":"BER","type":"S","exchDisp":"Berlin","typeDisp":"Equity"},{"symbol":"XOM-U.TI","name":"EXXON
+        MOBIL","exch":"TLO","type":"S","exchDisp":"TLX Exchange ","typeDisp":"Equity"},{"symbol":"0R1M.L","name":"EXXON
+        MOBIL CORP EXXON MOBIL OR","exch":"LSE","type":"S","exchDisp":"London","typeDisp":"Equity"}]}})
+    http_version: 
+  recorded_at: Sun, 17 May 2015 19:48:09 GMT
+recorded_with: VCR 2.9.3
