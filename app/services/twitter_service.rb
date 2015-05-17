@@ -16,12 +16,4 @@ class TwitterService
     client.search(terms, lang: "en")
   end
 
-
 end
-
-=begin
-topics = ["google", "ibm"]
-client.filter(:track => topics.join(",")) do |object|
-  puts object.text if object.is_a?(Twitter::Tweet)
-end
-=end

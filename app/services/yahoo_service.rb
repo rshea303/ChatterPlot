@@ -21,7 +21,6 @@ class YahooService
        { 
         "title"       => item.xpath("title").text,
         "link"        => item.xpath("link").text,
-        "description" => item.xpath("description").text
        }
     end
   end
