@@ -10,4 +10,8 @@ class Company < ActiveRecord::Base
     end
   end
 
+  def self.not_legit_symbol(ticker)
+    ticker == nil || ticker['symbol'].chars.include?('.')
+  end
+
 end
