@@ -15,7 +15,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Sun, 17 May 2015 19:48:08 GMT
+      - Sun, 17 May 2015 19:50:03 GMT
       cache-control:
       - max-age=1800, public
       content-type:
@@ -29,7 +29,7 @@ http_interactions:
       connection:
       - close
       via:
-      - http/1.1 media-border150.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
+      - http/1.1 media-border161.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
       server:
       - ATS
       strict-transport-security:
@@ -48,7 +48,7 @@ http_interactions:
         MOBIL","exch":"TLO","type":"S","exchDisp":"TLX Exchange ","typeDisp":"Equity"},{"symbol":"0R1M.L","name":"EXXON
         MOBIL CORP EXXON MOBIL OR","exch":"LSE","type":"S","exchDisp":"London","typeDisp":"Equity"}]}})
     http_version: 
-  recorded_at: Sun, 17 May 2015 19:48:08 GMT
+  recorded_at: Sun, 17 May 2015 19:50:04 GMT
 - request:
     method: get
     uri: http://autoc.finance.yahoo.com/autoc?query=exxon&callback=YAHOO.Finance.SymbolSuggest.ssCallback
@@ -64,7 +64,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Sun, 17 May 2015 19:48:08 GMT
+      - Sun, 17 May 2015 19:50:03 GMT
       cache-control:
       - max-age=1800, public
       content-type:
@@ -78,7 +78,7 @@ http_interactions:
       connection:
       - close
       via:
-      - http/1.1 media-border10.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
+      - http/1.1 media-border33.global.media.bf1.yahoo.com (ApacheTrafficServer [cMsSfW])
       server:
       - ATS
       strict-transport-security:
@@ -97,5 +97,5 @@ http_interactions:
         MOBIL","exch":"TLO","type":"S","exchDisp":"TLX Exchange ","typeDisp":"Equity"},{"symbol":"0R1M.L","name":"EXXON
         MOBIL CORP EXXON MOBIL OR","exch":"LSE","type":"S","exchDisp":"London","typeDisp":"Equity"}]}})
     http_version: 
-  recorded_at: Sun, 17 May 2015 19:48:09 GMT
+  recorded_at: Sun, 17 May 2015 19:50:04 GMT
 recorded_with: VCR 2.9.3
