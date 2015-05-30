@@ -5,6 +5,7 @@ RSpec.describe StaticPagesController, type: :controller do
     get :home
 
     expect(response).to render_template(:home)
+    expect(response).to have_http_status(:success)
   end
 
 end
