@@ -5,7 +5,5 @@ class StaticPagesController < ApplicationController
     @company_scores = Company.scores
   end
 
-  def landing
-  end
 end
 
