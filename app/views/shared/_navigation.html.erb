@@ -13,13 +13,6 @@
         <% end %>
       </div>
       <div class="col-xs-4">
-        <div id="login">
-          <% if current_user %>
-            <%= link_to "Log Out", session_path, method: :delete %>
-          <% else %>
-            <%= link_to image_tag("twitter.png"), "/auth/twitter" %> 
-          <% end %>
-        </div>
       </div>
     </div>
   </div>
