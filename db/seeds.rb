@@ -13,9 +13,12 @@ class Seed
     Company.create(name: "ibm", ticker_symbol: "IBM"),
     Company.create(name: "microsoft", ticker_symbol: "MSFT"),
     Company.create(name: "amazon", ticker_symbol: "AMZN"),
-    Company.create(name: "pepsi", ticker_symbol: "PEP"),
     Company.create(name: "walmart", ticker_symbol: "WMT"),
-    Company.create(name: "exxon", ticker_symbol: "XOM")
+    Company.create(name: "exxon", ticker_symbol: "XOM"),
+    Company.create(name: "pepsi", ticker_symbol: "PEP"),
+    Company.create(name: "nike", ticker_symbol: "NKE"),
+    Company.create(name: "sears", ticker_symbol: "SHLD"),
+    Company.create(name: "texas instruments", ticker_symbol: "TXN")
     ]
   end
 
