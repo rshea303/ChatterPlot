@@ -11,9 +11,6 @@ class Company < ActiveRecord::Base
   end
 
   def self.scores(company_names)
-
-    require "pry"
-    binding.pry
     collector = []
     company_names.each do |name|
       collector << SentimentAnalysis.new(TwitterService.new.search_by(name).take(100).map do |tweet|
