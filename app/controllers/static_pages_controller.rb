@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
       @company_scores = Company.scores(@company_names)
     else
       @company_names = Company.all.map(&:name).sort
-      @company_scores = Company.scores
+      @company_scores = Company.scores(@company_names)
     end
   end
 end
