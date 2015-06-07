@@ -13,9 +13,9 @@ class Company < ActiveRecord::Base
   def self.scores(company_names)
     collector = []
     company_names.each do |name|
-      collector << SentimentAnalysis.new(TwitterService.new.search_by(name).take(100).map do |tweet|
-        tweet.text
-      end.join(' ')).score
+      company_tweets = TwitterService.new.search_by(name).take(25).map {|tweet| tweet.text}
+      company_tweet = company_tweets.join(' ')
+      collector << SentimentAnalysis.new(company_tweet).score
     end
     collector
   end

@@ -7,7 +7,8 @@ class CompaniesController < ApplicationController
     else
       ticker_symbol = TickerSymbolService.new.symbols(params[:q])['symbol']
       name = TickerSymbolService.new.symbols(params[:q])['name']
-      @dashboard = DashBoard.new(ticker_symbol, name)
+      search_name = params[:q]
+      @dashboard = DashBoard.new(ticker_symbol, name, search_name)
     end
   end
 end

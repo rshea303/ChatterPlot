@@ -1,9 +1,10 @@
 class DashBoard
-  attr_reader :ticker_symbol, :name
+  attr_reader :ticker_symbol, :name, :search_name
 
-  def initialize(ticker_symbol, name)
+  def initialize(ticker_symbol, name, search_name)
     @ticker_symbol = ticker_symbol
     @name          = name
+    @search_name   = search_name
   end
 
   def articles
@@ -11,12 +12,12 @@ class DashBoard
   end
 
   def tweets
-    TwitterService.new.search_by("#{name}").take(100)
+    TwitterService.new.search_by("#{search_name}").take(25)
   end
 
   def score
-    tweets_text = tweets.map {|tweet| tweet.text}
-    SentimentAnalysis.new(tweets_text.join(' ')).score
+    company_tweets = tweets.map {|tweet| tweet.text}
+    SentimentAnalysis.new(company_tweets.join(' ')).score
   end
 
   def stock_price
