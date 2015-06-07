@@ -60,17 +60,17 @@ class DashBoard
   
   def sentiment_color(score)
     if score >= 50
-      'green'
+      '#6EBF60'
     else
-      'red'
+      '#D1002D'
     end
   end
 
   def which_color
     if stock_price > StockInfo.new(ticker_symbol).open
-      'green'
+      '#6EBF60'
     else
-      'red'
+      '#D1002D'
     end
   end
 end

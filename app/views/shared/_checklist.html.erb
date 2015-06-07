@@ -1,0 +1,16 @@
+<div id="checklist">
+  <%= form_tag({:controller => "static_pages", :action => "home"}, :method => :get) do %>
+    <%= fields_for :company_ids do |ff| %>
+      <ul style="list-style-type: none;">
+        <% @companies.each do |company| %>
+          <li>
+            <%= ff.check_box(company.name, {}, company.id, nil) %>
+            <%= company.name %>
+          </li>
+        <% end %>
+      </ul>
+      <%= ff.submit "Compare Companies", class: "btn btn-default" %>
+    <% end %>
+  <% end %>
+</div>
+

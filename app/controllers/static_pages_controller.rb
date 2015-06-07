@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def home
-      @companies = Company.all
+      @companies = Company.order(:name)
 
     if params[:company_ids]
       @company_names = Company.selected_companies(params[:company_ids])

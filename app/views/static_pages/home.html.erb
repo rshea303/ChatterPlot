@@ -1,27 +1,7 @@
 <div class="container home-page" style="padding: 12px;">
   <div class="row">
     <div class="col-xs-3" style="background-color: black; margin-top: 25px; margin-bottom: 25px; height: 500px;">
-      <p>
-        Welcome to Chatterplot!
-      </p>
-      <p>
-        There are two ways to learn more about your favorite companies:
-      </p>
-      <p>
-        Use the checklist on this page to select companies for a side by side comparison of their current sentiment scores.
-        </p>
-        <p>
-        Enter a company name into the search field in the navigation bar to learn more about an individual company, including:
-        <ul>
-          <li>Recent news articles associated with the company</li>
-          <li>Recent tweets regarding the company</li>
-          <li>Sentiment score</li>
-          <li>Stock information</li>
-        </ul>
-        <p>
-        All information is gathered and displayed in real-time to provide the most update data for your investment needs.
-        </p>
-      </p>
+      <%= render 'shared/overview' %>
     </div>
     <div class="col-xs-6">
       <div class="row" style="margin-top: 25px; margin-bottom: 25px;">
@@ -31,19 +11,7 @@
       </div>
     </div>
     <div class="col-xs-3" style="background-color: black; margin-top: 25px; height: 500px;">
-      <%= form_tag({:controller => "static_pages", :action => "home"}, :method => :get) do %>
-        <%= fields_for :company_ids do |ff| %>
-          <ul style="list-style-type: none;">
-            <% @companies.each do |company| %>
-              <li>
-                <%= ff.check_box(company.name, {}, company.id, nil) %>
-                <%= company.name %>
-              </li>
-            <% end %>
-          </ul>
-          <%= ff.submit "Submit", class: "btn btn-default" %>
-        <% end %>
-      <% end %>
+      <%= render 'shared/checklist' %>
     </div>
   </div>
 </div> 
