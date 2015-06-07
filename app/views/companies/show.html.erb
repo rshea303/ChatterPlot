@@ -1,84 +1,12 @@
 <div class="container" style="padding: 12px;">
   <div class="row">
 
-    <div class="row">
-      <div class="col-xs-4">
-        <h3 class="text-center articles-heading">Relevant Articles</h3>
-      </div>
-
-      <div class="text-center col-xs-4">
-        <h3 class="text-center company-title"><%= @dashboard.company_name %> (<%= @dashboard.company_ticker_symbol %>)</h3>
-      </div>
-
-      <div class="col-xs-4">
-        <h3 class="text-center tweets-heading">Most Recent Tweets</h3>
-      </div>
-    </div>
+    <%= render 'shared/company_header' %>
 
     <div class="row">
-      <div class="col-xs-4">
-        <div class="text-left articles-body"> 
-          <% @dashboard.articles.each do |article| %>
-            <p style="color: black">
-            <a href=<%= article['link'] %> target="_blank"><%= article['title'] %></a>
-            </p>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="col-xs-4">
-        <div class="row">
-          <div class="text-center sentiment-score" style="background-color: <%= @dashboard.color %>;"> 
-            <h2>Sentiment score</h2>
-            <h2><%= @dashboard.score %></h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-4 text-center" style="border: solid black; height: 200px;">
-            <div class="row stock-data">
-              <p>Daily High</p>
-              <p><%= number_to_currency(@dashboard.high, precision: 2) %></p> 
-            </div>
-            <div class="row stock-data">
-              <p>Daily Low</p>
-              <p><%= number_to_currency(@dashboard.low, precision: 2) %></p>
-            </div>
-          </div>
-
-          <div class="col-xs-4 text-center stock-price" style="height: 200px;"> 
-            <div class="row stock-data" style="background-color: <%= @dashboard.stock_price_color %>;">
-              <p>Stock Price</p>
-              <p><%= number_to_currency(@dashboard.stock_price, precision: 2) %></p>
-            </div>
-            <div class="row stock-data">
-              <p>Open</p>
-              <p><%= number_to_currency(@dashboard.open, precision: 2) %></p>
-            </div>
-          </div>
-
-          <div class="col-xs-4 text-center" style="border: solid black; height: 200px;">
-            <div class="row stock-data">
-              <p>12 Month High</p>
-              <p><%= number_to_currency(@dashboard.year_high, precision: 2) %></p>
-            </div>
-            <div class="row stock-data">
-              <p>12 Month Low</p>
-              <p><%= number_to_currency(@dashboard.year_low, precision: 2) %></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-4">
-        <div class="text-left tweets"> 
-              <ul>
-                <% @dashboard.tweets.each do |tweet| %>
-                  <li><a href=<%= "https://www.twitter.com/#{tweet.user.screen_name}" %> target="_blank"><%= tweet.text %></a></li><br>
-              </ul>
-            <% end %>
-          </div>
-      </div>
+      <%= render 'shared/articles' %>
+      <%= render 'shared/stock_info' %>
+      <%= render 'shared/tweets' %>
     </div>
         
   </div>

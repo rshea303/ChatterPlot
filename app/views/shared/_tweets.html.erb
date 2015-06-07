@@ -1,0 +1,10 @@
+<div class="col-xs-4">
+  <div class="text-left tweets"> 
+    <ul style="list-style-type: none;">
+      <% @dashboard.tweets.each do |tweet| %>
+        <li><a href=<%= "https://www.twitter.com/#{tweet.user.screen_name}" %> target="_blank"><%= tweet.text %></a></li><br>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
