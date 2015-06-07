@@ -15,7 +15,8 @@ class DashBoard
   end
 
   def score
-    SentimentAnalysis.new(tweets.join(' ')).score
+    tweets_text = tweets.map {|tweet| tweet.text}
+    SentimentAnalysis.new(tweets_text.join(' ')).score
   end
 
   def stock_price
