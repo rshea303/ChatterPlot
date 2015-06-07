@@ -12,7 +12,7 @@ class DashBoard
   end
 
   def tweets
-    TwitterService.new.search_by("#{search_name}").take(25)
+    TwitterService.new.search_by("#{search_name}").take(100)
   end
 
   def score
